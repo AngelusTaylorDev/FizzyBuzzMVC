@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "TheCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Main Body Section -->
+<main class="flex-shrink-0">
+    <div class="container py-5 pt-5 mt-5">
+        <h2 class="tittle border-1 border-bottom border-dark">The Code for Project Palindrome</h2>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col-lg-8">
+                <pre class="line-numbers"><code class="language-javascript">
+                    // Pseudo code
+                </code></pre>
+            </div>
+            <div class="col-lg-4">
+                <p>The code is struched in 3 functione and one control statment</p>
+                <h5>Project Palindrome Presented using <span><a target="_blank" href="https://prismjs.com/index.html">Prism.js</a></span></h5>
+                <p class="lead">The goal of this project is to input a string and use a function to check if it is a palindrome.
+                    A palindrome is a word or phrase that reads the same backward and forward. When palindromes are the length of a sentence, they ignore capitalization, punctuation, and word boundaries. 
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Prism JS File -->
+<script src="/js/prism.js"></script>
+<script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+        'remove-indent': true,
+        'left-trim': true,
+        'right-trim': true
+    })
+</script>
+

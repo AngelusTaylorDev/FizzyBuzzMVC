@@ -1,0 +1,200 @@
+﻿/* Root Colors */
+:root {
+    --primary-color: #5A1B02;
+    --secondary-color: #EEBA0B;
+    --dark-color: #2C1604;
+    --white-color: #f8f7f1;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* font styling */
+h1,
+h2,
+h3 {
+    color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+.app-name {
+    font-size: 1.5em;
+}
+
+h4 {
+    color: var(--dark-color);
+    font-family: 'Gideon Roman', cursive;
+    font-weight: 800;
+}
+
+h5 {
+    color: var(--light-color);
+    font-family: 'Gideon Roman', cursive;
+}
+
+p {
+    font-family: 'Gideon Roman', cursive;
+}
+
+/* a tag styling */
+a {
+    color: var(--secondary-color);
+}
+
+    a:hover {
+        color: var(--dark-color);
+    }
+
+/* button styling */
+.btn {
+    color: var(--secondary-color);
+    background-color: var(--dark-color);
+}
+
+.btn:hover {
+    color: var(--dark-color);
+    background-color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* navbar Styling having to overide bootstrap */
+#app-name-icon {
+    color: var(--white-color);
+}
+
+nav {
+    background-color: var(--dark-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.navbar-dark li a {
+    font-size: 1.2rem;
+}
+
+nav img {
+    width: 30px;
+    height: 28px;
+}
+
+/* body styling */
+body {
+    color: var(--dark-color);
+}
+
+/* Container styling */
+main > .container {
+    padding: 15px 15px 0;
+    margin-bottom: 15px;
+}
+
+/* Main Body Styling */
+.app-logo img {
+    width: 80%;
+}
+
+.inBolden {
+    font-weight: bold;
+}
+
+/* Tech Icons styling */
+#html-icon {
+    color: #FF5733;
+}
+
+#css-icon {
+    color: #2965f1;
+}
+
+#js-icon {
+    color: #f0db4f;
+}
+
+#bootstrap-icon {
+    color: #563d7c;
+}
+
+.fa-check-square {
+    color: var(--secondary-color);
+}
+
+.lead {
+    font-size: 0.9em;
+}
+
+.techStackImg {
+    width: 48px;
+}
+
+/* Prism custom JS */
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* footer styling */
+.footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    margin-top: auto;
+}
+
+.email {
+    font-size: 1rem;
+}
+
+footer, img {
+    width: 180px;
+}
+
+.footer .social > a {
+    color: var(--white-color);
+    opacity: 0.7;
+}
+
+.footer .social > a:hover {
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+/*Media Quary */
+
+/*Tablets [1024px -> 1366px]*/
+@media only screen and (max-width: 1366px) {
+
+    /* Main Body Styling */
+    .app-logo img {
+        width: 80%;
+    }
+}
+
+/*Small smartphones [768px -> 1024px]*/
+@media only screen and (max-width: 1023px) {
+
+    /* Main Body Styling */
+    .app-logo img {
+        width: 40%;
+    }
+}
