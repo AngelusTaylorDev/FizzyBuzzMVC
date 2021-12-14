@@ -1,8 +1,83 @@
-﻿
+﻿<!-- Using the below model -->
+@model FizzyBuzzMVC.Models.FuzzyBuzz
+
 @{
     ViewData["Title"] = "App";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>App</h1>
+<!-- Main Body Section -->
+<main class="flex-shrink-0 pt-3">
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col col-lg-4 border-end border-2">
+                <h1>Fizzy Buzz: A coding project</h1>
+                <p class="lead">
+                    The FizzBuzz algorithm is a classic coding test given in coding interviews. Pseudo Code: <br><br>
+                    1. Print integers 1 to N. <br>
+                    2. Print “Fizz” if an integer is divisible by 3.<br>
+                    3. Print “Buzz” if an integer is divisible by 5.<br>
+                    4. Print “FizzBuzz” if an integer is divisible by both 3 and 5.
+                </p>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                <p>1. Enter a starting value and an ending value.</p>
+                <p>2. Press the FizzBuzz! button </p>
+                <p>
+                    3. Your results will be printed to the Screen as follows:
+                    <br><br>
+                    If an integer is divisible by 3, “Fizz” Will be printed. <br>
+                    If an integer is divisible by 5, "Buzz" Will be printed. <br>
+                    If an integer is divisible by both 3 and 5, "FizzBuzz" Will be printed. <br>
+                </p>
+            </div>
+            <div class="col col-lg-8">
+                <div>
+                    <h1>Enter Values</h1>
+                    <form asp-controller="Home" asp-action="App" method="post">
+                        <div class="row gy-2 gx-3">
+                            <div class="form-group">
+                                <label asp-for="FuzzyValue">Fuzzy Value</label>
+                                <input asp-for="FuzzyValue" type="number" value="@Model.FuzzyValue" class="form-control" placeholder="Enter Fuzzy">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BuzzValue">Buzz Value</label>
+                                <input type="number" asp-for="BuzzValue" value="@Model.BuzzValue" class="form-control" placeholder="Enter Buzz">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn btn-outline-dark btn-lg px-4 me-md-2" type="submit">FizzyBuzz</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h2 class="mt-5 boder-bottom border-2">Results</h2>
+                    <div class="table-responsive">
+                        <!-- Results go here -->
+                        @if (@Model.Result.Count > 0)
+                        {
+                            <table class="table table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th colspan="5">Fuzzy Buzz Results</th>
+                                    </tr>
+                                </thead>
+
+                                @for (var i = 0; i < Model.Result.Count(); i += 5)
+                                {
+                                    <tr>
+                                        <td>@Model.Result[i]</td>
+                                        <td>@Model.Result[i + 1]</td>
+                                        <td>@Model.Result[i + 2]</td>
+                                        <td>@Model.Result[i + 3]</td>
+                                        <td>@Model.Result[i + 4]</td>
+                                    </tr>
+                                }
+                            </table>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 

@@ -1,11 +1,8 @@
 ﻿using FizzyBuzzMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FizzyBuzzMVC.Controllers
 {
@@ -23,9 +20,64 @@ namespace FizzyBuzzMVC.Controllers
             return View();
         }
 
+        // Getting the information needed.
+        [HttpGet]
         public IActionResult App()
         {
-            return View();
+            // Create the model
+            FuzzyBuzz model = new();
+
+            //Set Fuzzy default Value
+            model.FuzzyValue = 3;
+
+            //Set Buzz default Value
+            model.BuzzValue = 5;
+
+            //Return the model to the view
+            return View(model);
+        }
+
+        // Setting up the post recieved Data
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult App(FuzzyBuzz fuzzyBuzz)
+        {
+            // Instancate the Result list of strings
+            List<string> fbItems = new();
+
+            // Set the bools for the Fuzzy and Buzz values
+            bool fuzzy;
+            bool buzz;
+
+            // Loop through the list of numbers from 1 to 100
+            for (int i = 1; i <= 100; i++)
+            {
+                // Check to see if the Fuzzy and Buzz values are Fuzzy, Buzz, or FuzzyBuzz
+                fuzzy = (i % fuzzyBuzz.FuzzyValue == 0);
+                buzz = (i % fuzzyBuzz.BuzzValue == 0);
+
+                // Conditional loot to set the algo flow
+                if (fuzzy == true && buzz == true)
+                {
+                    fbItems.Add("FuzzyBuzz");
+                }
+                else if (fuzzy == true)
+                {
+                    fbItems.Add("Fuzzy");
+                }
+                else if (buzz == true)
+                {
+                    fbItems.Add("Buzz");
+                }
+                else
+                {
+                    fbItems.Add(i.ToString());
+                }
+            }
+            // set all the numbers and strings in fbItems to the result
+            fuzzyBuzz.Result = fbItems;
+
+            return View(fuzzyBuzz);
         }
 
         public IActionResult TheCode()
