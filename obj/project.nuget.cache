@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HDbO9zeEqUEXVmBKyZX4ELjnSjYmfzoOD/9o2d5s2zkbJjM4WyT2X2kwM4/1bYNG/AcTqwWdUISlbT8YNhVgTQ==",
+  "dgSpecHash": "m10F70tWfZtGLCrXNzwNM0Audv2sJLJMKeXlXCSybrFwJaiWiorxRtX+EG1fA97+3x3T1sD9cuWKxavic3tTpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Angel\\PROJECTS\\ANGELUSTDEV\\.NET-DEV\\ASP.NET-MVC\\FizzyBuzzMVC\\FizzyBuzzMVC.csproj",
   "expectedPackageFiles": [
@@ -114,7 +114,8 @@
     "C:\\Users\\Angel\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Angel\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Angel\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Angel\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Angel\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Angel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }
